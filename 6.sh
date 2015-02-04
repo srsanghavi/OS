@@ -1,0 +1,2 @@
+read cmd
+$cmd
