@@ -1,17 +1,12 @@
-numb=$1
-i=1
-b=50
-if [ $numb -le 50 ]; then
-n=50
+hours=`date|cut -c12-13`
+if [ $hours -le 12 ];then
+	echo "Good Morning"
+else
+	if [ $hours -le 16 ];then
+		echo "Good Afternoon"
+	elif [ $hours -le 20 ];then
+		echo "Good Evening"
+	else
+		echo "Good Night"
+	fi
 fi
-if [ $numb -ge 50 ]; then
-n=$1
-fi
-
-while [ $i -le $n ]
-do
-j=`expr $i \* $i`
-echo "$j"
-i=`expr $i + 1`
-done
-

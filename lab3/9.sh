@@ -1,4 +1,8 @@
-echo Enter the filename
-read fil
-n=`grep -c ' ' $fil`
-echo Number of spaces in $fil is $n
+echo "what is the capital of gujarat?"
+read ans
+while [ $ans != "gandhinagar" ]
+	do
+	echo "wrong answer... enter again"
+	read ans
+done
+echo "Correct !!!"

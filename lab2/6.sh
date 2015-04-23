@@ -1,2 +1,0 @@
-read cmd
-$cmd

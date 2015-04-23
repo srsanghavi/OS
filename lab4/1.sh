@@ -1,13 +1,14 @@
- if [ $# -gt 0 ]  #to reverse a string
-then
-x=`echo $1 | wc -c`
-x=`expr $x - 1`
-final=""
-while [ $x -gt 0 ]
+y='y'
+while [ $y == 'y' ]
 do
-c=`echo $1 | cut -c $x`
-x=`expr $x - 1`
-final=$final$c
+	echo "Enter number to be squared:"
+	read n
+	if [ $n -gt 50 ]; then
+    		echo "nuber should be less than 50..."
+	else 
+		echo $(($n * $n))
+	fi
+	echo "do you want to continue...[y/n]?"
+	read y
 done
-fi
-echo Reverse string is : $final
+

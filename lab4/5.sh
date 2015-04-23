@@ -1,22 +1,25 @@
-echo "Enter the filename1"
-read file1
-echo "Enter the filename2"
-read file2
-if  test -s "$file1" 
-then 
-    echo "found the first file"
-else 
-    echo "first file not there"
-fi
+echo "enter the total salary for the computation of HRA"
+read salary
+echo "enter the HRA per month"
+read hra
+ah=$(($hra * 12))
+echo "The actual HRA received is $ah"
+echo "Rent paid in excess of 10% of salary"
+ss=`expr $salary / 10`
+m=`expr $ah - $ss`
+echo $m
+echo "50% of salary"
+fs=`expr $s / 2`
 
-if  test -s "$file2" 
-then 
-    echo "found the second file"
-    cat $file1 >> $file2
-    echo " the contents have been appended"
-else 
-    echo "The file didnt exist therefore creating it"
-    touch $file2
-    cat $file1 >> $file2
-    
+echo $fs
+if [ $ah -le $m ]; then
+	t=$ah
 fi
+if [ $m -le $ah ]; then
+	t=$m
+fi
+if [ $fs < $t ]; then
+	t=$fs
+fi
+echo "The HRA is $t"
+

@@ -1,9 +1,15 @@
-word=$1    #shell script to accept a number and a word as command line arguments and print the word the given number of times on each line.
-number=$2
-i=1;
-while [ $i -le $2 ]
+echo "How many number of terms to be calculated ?"
+read n
+x=0
+y=1
+cnt=2
+echo "$x"
+echo "$y"
+while [ $cnt -lt $n ]
 do
-echo "$word"
-i=`expr $i + 1`
+      z=`expr $x + $y `
+      x=$y
+      y=$z
+      cnt=`expr $cnt + 1 `
+      echo "$z"
 done
-
